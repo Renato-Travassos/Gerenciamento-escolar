@@ -2,14 +2,6 @@
 Um pequeno projeto de gerenciamento escolar
 COMO USAR O PROGRAMA
 
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
-
 
 ANTES DE TUDO,É APENAS UM DEMONSTRAÇÃO DE GERENCIAMENTO ESCOLAR 
 ----
