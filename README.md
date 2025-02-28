@@ -1,280 +1,140 @@
-# Gerenciamento-escolar
-Um pequeno projeto de gerenciamento escolar
-COMO USAR O PROGRAMA
+# Gerenciamento Escolar
 
+Este é um pequeno projeto de demonstração de um sistema de gerenciamento escolar. Ele permite gerenciar alunos, professores, matérias, horários e muito mais. Abaixo, você encontrará instruções claras sobre como usar o programa.
 
-ANTES DE TUDO,É APENAS UM DEMONSTRAÇÃO DE GERENCIAMENTO ESCOLAR 
-----
-## O QUE O APLICATIVO FAZ
--Gerencia alunos,suas faltas presença e notas
+## O que o aplicativo faz?
 
--Gerencia professores,horários e suas disponibilidades
+- **Gerencia alunos**: Controla faltas, presenças e notas.
+- **Gerencia professores**: Organiza horários e disponibilidades.
+- **Análise de dados**: Gera relatórios e análises sobre o desempenho escolar.
 
--análise de dados em geral
+## Como usar o programa
 
-# uso livre
+### Classes
 
-# **CLASSES**
+Para adicionar alunos, é necessário criar **classes**. As classes devem seguir um formato específico:
 
-PARA ADICIONAR ALUNOS É PRECISO CRIAR CLASSES
+- **Formato**: Uma letra seguida de um número (ex: A1, B2).
+- **Exemplo**: A1, B2, C3.
 
+**Observação**: Não importa se você digita em maiúsculas ou minúsculas, o sistema sempre salvará em maiúsculas.
 
-
-
-CLASSES SERÃO ACEITAS APENAS SE FOREM UMA SEGUIDO DE UM NÚMERO
-
-
-```diff
-!  EXEMPLO:
-```
-A1 ,B2
-
-PEQUENO OU GRANDE A DIGITAÇÃO,NO BANCO FICARÁ COM LETRA MAIUSCULÁ
-
-DEMONSTRAÇÃO DO FORM 
+#### Exemplo de Formulário para Adicionar Classes:
 
 | Nome da Classe |
-|---|
-| A1|
- 
-
-```diff
-- CASO QUEIRA DELETAR,BASTA CLICAR NA CLASSE QUE QUER REMOVER E APERTE EM DELETAR
-```
-
- 
-
-----
-
-# **MATERIAS**
-
-```diff
-+ ADICIONAR MATERIAS
-```
-
-
-É PERMITIDO APENAS CARACTERES,NÃO É PERMITIDO NÚMEROS OU ANDERLINES,COMO@ etc
-
-| Nome do Curso | ID do Curso |
-|---|---|
-| geografia     |       1     |
-  
-
-----
-
-# **PROFESSORES**
-
-```diff
-+ ADICIONAR PROFESSORES
-```
-
-```diff
-! NECESSÁRIO A EXISTÊNCIA DE MATERIAS PARA SELECIONAR QUAL ÁREA ELE ATUA,CASO NÃO ESTEJA NA LISTA,ADICIONAR AO BANCO 
- ```
-
-VC PODE SELECIONAR QUAL CLASSE ELE SERÁ RESPONSÁVEL,ELE PODE SER RESPONSÁVEL POR TODOS OS TURNOS
-OU APENAS PARA UM ESPECIFICO OU A CLASSIFICAÇÃO "NENHUM" NO CASO,É COMO SE FOSSE UM COLABORADOR 
-OU PRESTADOR DE SERVIÇOS
-
-AQUI ESTÁ AS OPÇÕES 
-
-1. MANHÃ
-2. TARDE
-3. NOITE
-4. INDETERMINADO
-5. NENHUM
-
-RESPONSÁVEL POR TODOS OS TURNOS OU PELO MENOS 2 
-
-INDERTERMINADO <---
-
-SEM NENHUMA RESPONSABILIDADE,OPÇÃO RECOMENDADA PARA PROFESSORES SUBSTITUTOS
-
-NENHUM <--
-
-OBSERVAÇÃO:APENAS OS PROFESSORES DE CERTOS TURNOS PODERAM LANÇAR A NOTA DE SUA TURMA
-
-```diff
-! EXEMPLO 
-```
-
- 
-PROFESSOR DO TURNO DA MANHÃ DE TAL CLASSE SÓ PODERÁ LANÇAR AS NOTAS DE SUA TURMA,EXCETO SE ELE FOR
-DO TURNO INDETERMINADO,ESTE TEM A CHAVE MESTRA,PODEMOS ASSIM DIZER,PORÉM MESMO COM ISSO,ELE SÓ PODERÁ LANÇAR NOTAS RELACIONADO A SUA MATERIA,NÃO MAIS QUE ISSO 
-
-
-## Tabela de Professores
-
-| ID do Professor | Nome | CPF | Matéria | Número | Email | Empregado | Responsável pela Classe | Turno Responsável |
-|---|---|---|---|---|---|---|---|---|
-| 1 | João da Silva | 123.456.789-00 | Matemática | (11) 99999-9999 | joao@email.com | ✅  | A5 | Manhã |
-| 2 | Maria Oliveira | 987.654.321-00 | Português | (21) 88888-8888 | maria@email.com | ❌ | B6 | Tarde |
-| ... | ... | ... | ... | ... | ... | ... | ... | ... |
-  
-## FILTROS
-
-AGORA EM RELAÇÃO A PROFESSORES,VC PODE FILTRAR SEUS TURNOS E SE ELES SÃO EMPREGADOS
-SE VC COLOCAR MANHÃ NO FILTRO DE TURNO,APARECERÃO APENAS AQUELES QUE TEM TURNO DA MANHÃ
-CASO INVENTE DE COLOCAR EMPREGADO,APARECERÁ AQUELES QUE SÃO EMPREGADOS 
-
-```diff
-- QUANDO DELETAR UM PROFESSOR,TODA SUA TABELA DE HORÁRIO SERÁ DELETADA JUNTO DELE
-```
-
-----
-
-
-## HORÁRIOS/AULAS
-
-LANÇAMENTOS DE AULAS OU HORÁRIOS,CHAME COMO PREFERIR
-
-| id_horario | turno       | inicia_as | termina_as | data       | classe |
-|------------|-------------|-----------|------------|------------|--------|
-| 1          | Manhã       | 08:00     | 10:00      | 2024-10-27 |  A1    |
-| 2          | Tarde       | 14:00     | 16:00      | 2024-10-27 |  B4    |
-| 3          | Noite       | 19:00     | 21:00      | 2024-10-28 |  C5    |
-| ...        | ...         | ...       | ...        | ...        | ...    |
-
- 
-TODOS OS PROFESSORES PODEM TER SEUS HORÁRIOS EM SUA TABELA 
-PODEM ATE DAR AULAS PARA OUTRAS CLASSES,POIS É LIVRE PARA ESCOLHAS,ELE APENAS É RESPONSÁVEL POR 
-LANÇAR NOTAS,PELO MENOS É O QUE DEVERIA SER 
-
-VC PODE MARCAR AULAS PARA QUALQUER MÊS,DIA,CONTANTO QUE AQUELA CLASSE E TURNO ESTEJAM DISPONÍVEIS
-CASO NÃO ESTEJA,VC TEM A OPÇÃO DE OLHAR QUAIS SÃO OS HORÁRIOS DAQUELE DIA PARA AQUELA CLASSE E 
-TURNO
-
-LEMBRANDO QUE CADA TURNO TEM SEUS ALUNOS,NUNCA SÃO OS MESMOS
-
-> **OBSERVAÇÃO:** Professores, ao adicionar fotos, existe a possibilidade de ocorrer um bug durante o processo de upload.
-
-```diff
-! VC TEM A OPÇÃO DE DELETAR OU EDITAR OS HORÁRIOS CASO OCORRA ALGUM IMPREVISTO 
-```
-
-AGORA COMO FAÇO PARA LISTAR OS ALUNOS?VÁ EM CHECAR 
-
-```diff
- ! MARQUE SE O PROFESSOR ESTÁ PRESENTE OU NÃO,CASO NÃO ESTEJA SELECIONE  O NÃO ,IRÁ APARECER UMA LISTA DE PROFESSORES DISPONÍVEIS PARA TAL DIA E HORA, DEPENDENDO DA MATERIA
- ```
-
-AGORA CASO O PROFESSOR ESTEJA PRESENTE,MARQUE SIM E VÁ EM  FAZER_CHECK
-
-MARQUE APENAS OS ALUNOS PRESENTES,QUEM NÃO ESTIVER MARCADO SERÁ AUTOMATICAMENTE MARCADO COMO AUSENTE
-
-
-
-<h2>Lista de Nomes e IDs</h2>
-
-> * João da Silva - ID: 1 ✅
-> * Maria Oliveira - ID: 2 ❌
-> * Carlos Pereira - ID: 3 ✅
-> * Ana Souza - ID: 4 ❌
-> * Pedro Rodrigues - ID: 5 ✅
-> * Lucas Santos - ID: 6 ❌
-> * Julia Costa - ID: 7 ✅
-> * Fernanda Almeida - ID: 8 ❌
-> * Ricardo Rocha - ID: 9 ✅
-> * Patrícia Gomes - ID: 10 ❌
-> * Gabriel Mendes - ID: 11 ✅
-> * Sofia Nunes - ID: 12 ❌
-> * Bruno Alves - ID: 13 ✅
-> * Isabela Cunha - ID: 14 ❌
-> * Rafael Castro - ID: 15 ✅
- 
-
-
-
-
-DEPOIS DE TUDO,VÁ EM CONFIRMAR,CASO O PROFESSOR NÃO ESTEJA PRESENTE,APENAS COLOQUE NÃO
-
-E EM SEGUIDA VÁ EM CONFIRMAR,POIS SERÁ RESPONSABILIDADE DAQUELE PROFESSOR CHECAR A TURMA,ASSIM QUE MARCADO,A PRESENÇA DO PROFESSOR SUBSTITUTO FICARA SERÁ COLOCADA.
-
-
-
-> **! OBSERVAÇÃO:**  
-> OS VALORES PODEM DUPLICAR. NO CASO DE VOCÊ INVENTAR DE FAZER CHECK E COLOCAR O PROFESSOR SUBSTITUTO E NA TABELA DO PROFESSOR, IR EM SEU HORÁRIO E CHECAR DE NOVO, ISSO DUPLICARÁ O VALOR, CRIANDO OUTRO.TANTO NOS DETALHES DO ALUNO QUANTO HORÁRIOS
- 
-
-----
-## ALUNOS
-AGORA EM RELAÇÃO AOS ALUNOS
-
-PARA CADA TURNO,O NÚMERO DE CHAMADA IRÁ SER DIFERENTE,VISTO QUE SÃO TURMAS DIFERENTES
-OU SEJA,ALUNOS DA TARDE DA MESMA CLASSE,NÃO TERÃO O NÚMERO DE CHAMADA CONTINUADO PELO DA MANHÃ
-SÃO TODOS INDIVIDUAIS
-VC PODE MUDAR DE CLASSE E TURNO QUALQUER ALUNO,PORÉM EXISTE UM BUG NO SISTEMA QUE INÍCIA O ALUNO A 
-PARTIR DO NÚMERO 1 DE CHAMADA,CASO RESOLVA MUDAR DE TURNO OU CLASSE,CASO VC RESOLVA DELETAR UM ALUNO,TODA A TABELA DE ALUNOS DAQUELA 
-CLASSE E TURNO SERÁ ATUALIZADA 
-
-| id_aluno | nome             | dependencia | classe.nome_ | turno      | numero_chamada |
-|----------|------------------|-------------|--------------|------------|----------------|
-| 1        | Ana Silva        | ✅          |       A6     | Manhã      | 1              |
-| 2        | Bruno Oliveira   | ✅          |       A2     | Tarde      | 2              |
-| 3        | Carla Rodrigues  | ❌          |       B4     | Manhã      | 3              |
-| ...      | ...              | ...         | ...          | ...         | ...            |
-
-
-
-
-
-EXEMPLO
-
-DELETEI UM ALUNO DA CLASSE A1 E ELE ERA DO TURNO DA MANHÃ
-
-APENAS A PARTE DA MANHÃ SERÁ ATUALIZADA
-
-
-EXISTE A OPÇÃO DELETAR VÁRIOS,PARA ESTÁ OPÇÃO,VC TERÁ QUE SELECIONAR QUE VC QUER DELETAR E NÃO PODERÁ
-FILTRAR OS ALUNOS QUANDO APERTAR O BOTÃO,CASO ISSO OCORRÁ,APERTE EM CANCELAR E FILTRE OS ALUNOS 
-QUE VC QUER DELETAR 
-
-
-TODOS OS ALUNOS PODEM TER FOTOS,CASO QUEIRA MAIS DETALHES DOS ALUNOS,APENAS CLIQUE EM DETALHES_ALUNO
-
-VC PODERÁ VER QUANTAS AULAS ELE FALTOU OU VEIO,VC PODE FILTRAR O MÊS QUE VC QUISER TAMBÉM
-
-MAS CASO VC QUEIRA SER MAIS ESPECIFICO,SELECIONE O FILTRO MATERIA,QUE ASSIM VC PODERÁ SABER COMO 
-ELE FOI NAS AULAS DA MATERIA EM QUESTÃO E DE QUEM FOI O RESPONSÁVEL PELA AULA 
-
-
-LEMBRANDO QUE A OPÇÃO RESETAR,SE APLICA A TODAS AS PESQUISAS,MENOS A PARTE DE  CLASSES E MATERIAS,POIS É 
-DESNECESSÁRIO
-
-Resetar TIRA TODOS OS FILTROS,OU SEJA,RETORNA AO QUE ERA ANTES 
+|----------------|
+| A1             |
+| B2             |
+
+**Para deletar uma classe**: Basta clicar na classe que deseja remover e apertar em "Deletar".
 
 ---
-## IMPRIMIR
 
-E AGORA VAMOS A ÚLTIMA,INFEZLIMENTE LIMITADA E NÃO TÃO BEM FEITA...
+### Matérias
 
-A OPÇÃO DE IMPRESSÃO,ELA PODE IMPRIMIR A TABELA EM QUESTÃO,PORÉM É LIMITADA,VISTO QUE SE COLOCAR
-MUITAS COLUNAS,ELA FICARÁ BUGADA E AS LETRAS ATRAVERSARAM ENTRE SI 
- 
-MAS ENFIM,ELA FUNCIONA ASSIM,CLIQUE NELA ,AO FAZER ISSO APARECERÁ AS COLUNAS DA TABELA QUE VC ESTÁ 
-VENDO/USANDO 
+Para adicionar matérias:
 
-Colunas | SELECIONADO
---------|--------
-id_aluno | ✅
-nome | ✅
-dependencia | ✅
-classe.nome_ | ❌
-turno | ✅
-numero_chamada | ✅
+- **Regras**: Apenas caracteres são permitidos. Números e símbolos (como @, _) não são aceitos.E priorize não colocar ~ ç ^ ` , pois isso pode dificultar ou gerar bugs
 
+#### Exemplo de Formulário para Adicionar Matérias:
 
+| Nome do Curso | ID do Curso |
+|---------------|-------------|
+| Geografia     | 1           |
+| Matematica    | 2           |
 
+---
 
+### Professores
 
-SELECIONE O ESTILO DE FONTE,TAMANHO DA FONTE,A FOLHA QUE VC QUER E O NOME QUE FICARÁ
-NO PDF,SELECIONE AS COLUNAS QUE VC QUER IMPRIMIR E CLIQUE EM IMPRIMIR,O ARQUIVO FICARÁ SALVO EM 
-file:///C:/Users/NOME_USÚARIO/OneDrive/Documents/documento.pdf
+Para adicionar professores:
 
-CASO NÃO QUEIRA MAIS IMPRIMIR,BASTA CLICAR EM CANCELAR E VC VOLTARÁ A ABA ANTERIOR
+- **Requisito**: É necessário que as matérias já estejam cadastradas para que o professor possa ser associado a uma área de atuação.
+- **Turnos**: O professor pode ser responsável por um ou mais turnos (Manhã, Tarde, Noite) ou ser classificado como "Indeterminado" ou "Nenhum".
 
+#### Opções de Turno:
 
-  
+1. Manhã
+2. Tarde
+3. Noite
+4. Indeterminado
+5. Nenhum
 
- 
+**Observação**: Apenas professores de turnos específicos podem lançar notas para suas turmas. Professores com turno "Indeterminado" têm acesso a todas as turmas, mas só podem lançar notas relacionadas à sua matéria.
 
+#### Exemplo de Tabela de Professores:
+
+| ID do Professor | Nome           | CPF           | Matéria     | Número        | Email           | Empregado | Responsável pela Classe | Turno Responsável |
+|-----------------|----------------|---------------|-------------|---------------|-----------------|-----------|-------------------------|-------------------|
+| 1               | João da Silva  | 123.456.789-00| Matemática  | (11) 99999-9999| joao@email.com  | ✅         | A5                      | Manhã             |
+| 2               | Maria Oliveira | 987.654.321-00| Português   | (21) 88888-8888| maria@email.com | ❌         | B6                      | Tarde             |
+
+**Filtros**: Você pode filtrar professores por turno e status de emprego (empregado ou não).
+
+**Para deletar um professor**: Ao deletar um professor, todos os horários associados a ele também serão removidos.
+
+---
+
+### Horários/Aulas
+
+Você pode lançar horários de aulas para cada turma. Cada horário é associado a um turno, classe e data específica.
+
+#### Exemplo de Tabela de Horários:
+
+| id_horario | Turno | Inicia às | Termina às | Data       | Classe |
+|------------|-------|-----------|------------|------------|--------|
+| 1          | Manhã | 08:00     | 10:00      | 2024-10-27 | A1     |
+| 2          | Tarde | 14:00     | 16:00      | 2024-10-27 | B4     |
+| 3          | Noite | 19:00     | 21:00      | 2024-10-28 | C5     |
+
+**Observação**: Professores podem ter horários para várias classes, mas só podem lançar notas para suas próprias matérias.
+
+**Para deletar ou editar horários**: Basta selecionar o horário e clicar em "Deletar" ou "Editar".
+
+---
+
+### Alunos
+
+Cada aluno é associado a uma classe e turno. O número de chamada é único para cada turma e turno.
+
+#### Exemplo de Tabela de Alunos:
+
+| id_aluno | Nome           | Dependência | Classe | Turno | Número de Chamada |
+|----------|----------------|-------------|--------|-------|-------------------|
+| 1        | Ana Silva      | ✅          | A6     | Manhã | 1                 |
+| 2        | Bruno Oliveira | ✅          | A2     | Tarde | 2                 |
+| 3        | Carla Rodrigues| ❌          | B4     | Manhã | 3                 |
+
+**Para deletar um aluno**: Ao deletar um aluno, o número de chamada dos demais alunos da mesma turma e turno será atualizado.
+
+**Detalhes do aluno**: Você pode ver quantas aulas o aluno faltou ou compareceu, e filtrar por mês ou matéria.
+
+---
+
+### Impressão
+
+A funcionalidade de impressão permite gerar PDFs das tabelas. No entanto, é limitada e pode apresentar bugs se muitas colunas forem selecionadas.
+
+#### Passos para imprimir:
+
+1. Selecione as colunas que deseja imprimir.
+2. Escolha o estilo e tamanho da fonte.
+3. Defina o nome do arquivo PDF.
+4. Clique em "Imprimir".
+
+O arquivo será salvo em: `file:///C:/Users/NOME_USÚARIO/OneDrive/Documents/documento.pdf`.
+
+**Para cancelar**: Basta clicar em "Cancelar" e você voltará à tela anterior.
+
+---
+
+## Observações Finais
+
+- **Bugs conhecidos**: 
+  - Ao mudar um aluno de turma ou turno, o número de chamada pode ser reiniciado.
+  - A funcionalidade de impressão pode apresentar problemas com muitas colunas.
+  - Ao fazer check-in de presença, valores podem ser duplicados se o processo for repetido.
+
+Este projeto é uma demonstração e pode conter bugs. Sinta-se à vontade para contribuir ou reportar problemas!
+
+**Uso livre**.
