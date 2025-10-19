@@ -136,5 +136,7 @@ O arquivo será salvo em: `file:///C:/Users/NOME_USÚARIO/OneDrive/Documents/doc
   - Ao fazer check-in de presença, valores podem ser duplicados se o processo for repetido.
 
 Este projeto é uma demonstração e pode conter bugs. Sinta-se à vontade para contribuir ou reportar problemas!
+OBS:ELE FUNCIONA LIVREMENTE NO VS CODE 2022 MAS APENAS COM A INSTALAÇÃO APRESENTA PROBLEMAS NÃO PRESENTES COMPILAÇÃO DE CÓDIGO,CONTÉM BUGS EM PARTE POR CONTA DISSO
+
 
 **Uso livre**.
